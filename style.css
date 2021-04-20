@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 90px);
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.nav_player {
+    height: 90px;
+    background-color: #282828;
+    /* z-index: 3; */
+    display: flex;
+    justify-content: space-between;
+}
+
+main nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    background-color: #000000;
+    height: 100%;
+    flex-shrink: 0;
+    /* position: relative; */
+}
+
+main .home {
+    position: relative;
+    width: 100%;
+    background-color: #141A23;
+    height: 100%;
+    overflow: auto;
+    padding-top: 90px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.banner_upgrade {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 90px;
+}
+
+.banner_upgrade span {
+    color: white;
+    line-height: 90px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-align: right;
+    padding: 10px;
+    vertical-align: middle;
+    margin-right: 25px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.menu span {
+    color: grey;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu span:hover {
+    color: white;
+}
+
+.collection_type {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.collections {
+    margin: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.collection_description {
+    font-size: 14px;
+    color: grey;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.collection_item {
+    text-align: center;
+    display: inline-block;
+    width: calc(100% / 6);
+}
+
+.collection_item img {
+    width: 90%
+}
+
+.round_images {
+    border-radius: 50%;
+}
+
+.collection_item .collection_name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.collection_item .collection_artist {
+    font-size: 12px;
+    color: grey;
+}
+
+@media all and (max-width: 992px) {
+    .collection_item {
+        width: calc(100% / 4);
+    }
+}
+
+.nav_top {
+    height: 100%;
+    overflow: hidden;
+}
+
+nav img {
+    width: 70%;
+    margin: 10px;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+    color: grey;
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: 3px solid black;
+}
+
+.nav_link:hover {
+    color: white;
+}
+
+.nav_select {
+    border-left: 3px solid lime;
+}
+
+.nav_link img {
+    width: 20px;
+}
+
+.nav_playlist {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 23px;
+    margin-top: 10px;
+}
+
+nav p {
+    margin-top: 15px;
+    color: grey;
+    cursor: pointer;
+}
+
+nav p:hover {
+    color: white;
+}
+
+#plus {
+    padding: 8px 10px;
+    color: black;
+    font-size: 15px;
+    background-color: grey;
+    margin-left: 23px;
+    
+}
+
+ul {
+    color: grey;
+    margin-left: 23px;
+    list-style-type: none;
+    padding-top: 20px;
+    font-size: 14px;
+    overflow: auto;
+}
+
+li:hover {
+    color: white;
+}
+
+li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.nav_bottom {
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+    background-color: black;
+    /* overflow: hidden; */
+}
+
+.nav_bottom_app {
+    display: flex;
+    align-items: center;
+    color: grey;
+    margin: 0 10px;
+    border-bottom: 1px solid grey;
+}
+
+.nav_bottom_app img {
+    width: 15px;
+    margin-left: 0;
+}
+
+.nav_bottom_app span {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav_bottom_app span:hover {
+    color: white;
+}
+
+hr {
+    margin: 0 10px;
+    color: grey;
+    border: 1px solid grey;
+}
+
+.nav_bottom_profile {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.nav_bottom_profile img {
+    width: 20px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.nav_bottom_profile span {
+    font-size: 16px;
+}
+
+.nav_player_left,
+.nav_player_right {
+    width: 200px;
+    height: 100%;
+    background-color: orange;
+}
+
+.nav_player_center {
+    width: 40%;
+    height: 100%;
+    background-color: orange;
+}
