@@ -89,9 +89,10 @@ ul {
     color: grey;
     margin-left: 23px;
     list-style-type: none;
-    padding-top: 20px;
+    margin-top: 20px;
     font-size: 14px;
-    overflow: auto;
+    overflow-y: auto;
+    height: 210px;
 }
 
 li:hover {
@@ -105,6 +106,7 @@ li {
 
 .nav_bottom {
     background-color: black;
+    flex-shrink: 0;
 }
 
 .nav_bottom_app {
@@ -234,7 +236,7 @@ main .home {
 .banner_upgrade span {
     color: white;
     line-height: 90px;
-    border: 2px solid white;
+    border: 2.5px solid white;
     border-radius: 20px;
     text-align: right;
     padding: 10px;
@@ -242,6 +244,13 @@ main .home {
     margin-right: 25px;
     cursor: pointer;
     font-size: 15px;
+}
+
+.banner_upgrade span:hover {
+    padding: 15px;
+    margin-right: 10px;
+    font-size: 20px;
+    border-radius: 27.5px;
 }
 
 .menu {
@@ -291,8 +300,50 @@ main .home {
     width: calc(100% / 6);
 }
 
+.collection_img {
+    position: relative;
+}
+
 .collection_item img {
     width: 90%
+}
+
+.collection_layover_color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.collection_layover_logo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.collection_layover_color_round {
+    border-radius: 50%;
+}
+
+.collection_layover_logo i {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.collection_img:hover .collection_layover_color {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.collection_img:hover .collection_layover_logo {
+    display: block;
 }
 
 .round_images {
@@ -410,10 +461,43 @@ main .home {
     color: white;
 }
 
-.nav_player_right input {
+.nav_player_right .volume {
+    position: relative;
     width: 45%;
     margin-right: 10px;
+    height: 4px;
+    background-color: grey;
+    border-radius: 2px;
 }
+
+.volume_impostato {
+    width: 30%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+}
+.volume:hover .volume_impostato {
+    background-color: yellow;
+}
+
+.punto_volume {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.volume:hover .punto_volume {
+    display: block;
+}
+
+
+
 
 .nav_player_center {
     display: flex;
@@ -440,13 +524,43 @@ main .home {
 .nav_player_center_bottom {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     height: 50%;
 }
 
-.nav_player_center_bottom input {
+.nav_player_center_bottom .traccia {
+    position: relative;
     width: 80%;
+    height: 4px;
+    background-color: grey;
+    border-radius: 2px;
+}
+
+.traccia_riprodotta {
+    width: 30%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+}
+.traccia:hover .traccia_riprodotta {
+    background-color: yellow;
+}
+
+.punto_traccia {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.traccia:hover .punto_traccia {
+    display: block;
 }
 
 .nav_player_center_bottom span {
